@@ -1,0 +1,11 @@
+<div class="text-center">
+  <h4> 🍽 <%= @restaurant.name %> - <%= @restaurant.category %> </h4>
+  <h5>📍<%= @restaurant.address %></h5>
+  <h5> ☎️ <%= @restaurant.phone_number %></h5>
+  <p><% @restaurant.reviews.each do |review| %>
+    <p>🖋 <%= review.content%>  -  <%= '⭐️' * review.rating %></p>
+    <% end %>
+  </p>
+
+  <%= link_to 'Back 🏠', restaurants_path %> <%= link_to 'Edit 🔩', edit_restaurant_path(@restaurant) %> <%= link_to 'Add a Review➕',  new_restaurant_review_path(@restaurant) %>
+</div>

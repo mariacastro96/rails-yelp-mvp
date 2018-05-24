@@ -1,0 +1,7 @@
+<div class="text-center">
+<h3>Restaurants</h3>
+<% @restaurants.each do |restaurant| %>
+  <h4> <%= link_to 'ℹ', restaurant_path(restaurant)%> <%= restaurant.name %> - <%= restaurant.category %> <%= link_to '🗑', restaurant_path(restaurant), method: :delete %></h4>
+<% end %>
+<%= link_to 'Create ➕', new_restaurant_path %>
+</div>

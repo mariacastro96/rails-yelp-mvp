@@ -1,0 +1,24 @@
+<%= form_for @restaurant do |t| %>
+  <div class="form-group">
+  <%= t.label :name, 'Name' %>
+  <%= t.text_area :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+  <%= t.label :category, 'Category' %>
+  <%= t.text_area :category, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+  <%= t.label :address, 'Address' %>
+  <%= t.text_area :address, class: "form-control" %>
+  </div>
+
+
+  <div class="form-group">
+  <%= t.label :phone_number, 'Phone_number' %>
+  <%= t.text_area :phone_number, class: "form-control" %>
+  </div>
+
+  <%= t.submit class: 'btn btn-primary text-center' %>
+<% end %>
